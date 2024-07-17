@@ -2,6 +2,7 @@
 # Constant frequency for prediction update
 # Getting linear velocity and angular velocity from /odom topic for better results
 
+
 import rospy
 import numpy as np
 from sensor_msgs.msg import Imu
