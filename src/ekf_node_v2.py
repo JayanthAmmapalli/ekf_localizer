@@ -109,9 +109,9 @@ class EKFNode:
         self.ekf = EKF()
         self.odom_sub = rospy.Subscriber('/odom', Odometry, self.odom_callback)
         self.gps_sub = rospy.Subscriber('/local_coordinates', PoseStamped, self.gps_callback)
-        self.pose_sub = rospy.Subscriber('/pose', PoseStamped, self.pose_callback)
+        # self.pose_sub = rospy.Subscriber('/pose', PoseStamped, self.pose_callback)
         self.pose_pub = rospy.Publisher('/ekf_pose', PoseStamped, queue_size=10)
-        # self.local_pub = rospy.Publisher('/local_coordinates_ekf', PoseStamped, queue_size=10)
+        self.local_pub = rospy.Publisher('/local_coordinates_ekf', PoseStamped, queue_size=10)
         self.error_pub = rospy.Publisher('/ekf_error', ErrorWithBounds, queue_size=10)
         # self.local_pose_pub = rospy.Publisher('/local_pose', PoseStamped, queue_size=10)
         
@@ -131,14 +131,7 @@ class EKFNode:
         # Extract and filter velocity and angular velocity
         raw_vel = msg.twist.twist.linear.x  # Linear velocity in x direction
         raw_omega = msg.twist.twist.angular.z  # Angular velocity around z-axis
-        rospy.loginfo(f"Raw AngularVelocity={raw_omega}")
         
-        self.vel = self.vel_filter.filter(raw_vel)
-        self.omega = self.omega_filter.filter(raw_omega)
-        
-        # Optional: log the filtered values
-        rospy.loginfo(f"Filtered LinearVelocity={self.vel}")
-        rospy.loginfo(f"Filtered AngularVelocity={self.omega}")
 
     def timer_callback(self, event):
         # EKF prediction step
