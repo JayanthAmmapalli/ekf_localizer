@@ -1,0 +1,9 @@
+float32 error_x
+float32 error_y
+float32 error_yaw
+float32 sigma_x_pos
+float32 sigma_x_neg
+float32 sigma_y_pos
+float32 sigma_y_neg
+float32 sigma_yaw_pos
+float32 sigma_yaw_neg

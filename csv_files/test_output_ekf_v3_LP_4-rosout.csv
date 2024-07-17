@@ -1,0 +1,21 @@
+time,.header.seq,.header.stamp.secs,.header.stamp.nsecs,.header.frame_id,.level,.name,.msg,.file,.function,.line,.topics
+2024/07/12/13:23:29.501091,3,1720805009,493375565,,2,/record_bag,Subscribing to /clock,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:29.501135,4,1720805009,494435858,,2,/record_bag,Subscribing to /imu,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:29.501141,5,1720805009,495461895,,2,/record_bag,Subscribing to /pose,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:29.501143,6,1720805009,496470659,,2,/record_bag,Subscribing to /odom,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:29.501145,7,1720805009,497512717,,2,/record_bag,Subscribing to /ublox/fix,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:29.501175,8,1720805009,499185140,,2,/record_bag,Subscribing to /cmd_vel,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:30.023295,2,1720805009,795293807,,8,/ekf_node,"bad callback: <bound method EKFNode.imu_callback of <__main__.EKFNode object at 0x7f8eba9dae80>>
+Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "/home/jayanth/sim_ws/src/ekf_localizer/src/ekf_node_v4.py", line 113, in imu_callback
+    self.imu_counter += 1
+AttributeError: 'EKFNode' object has no attribute 'imu_counter'
+",topics.py,_SubscriberImpl._invoke_callback,753,"['/pose', '/ekf_error', '/rosout', '/local_coordinates_ekf', '/local_coordinates', '/imu', '/ekf_pose', '/local_pose']"
+2024/07/12/13:23:30.501931,9,1720805010,501863092,,2,/record_bag,Subscribing to /utm_coordinates,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:30.503466,10,1720805010,503408419,,2,/record_bag,Subscribing to /local_coordinates,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:30.504655,11,1720805010,504608501,,2,/record_bag,Subscribing to /ekf_pose,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:30.506283,12,1720805010,506212131,,2,/record_bag,Subscribing to /local_coordinates_ekf,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:30.510335,13,1720805010,510193723,,2,/record_bag,Subscribing to /ekf_error,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']
+2024/07/12/13:23:30.511628,14,1720805010,511575827,,2,/record_bag,Subscribing to /local_pose,/tmp/binarydeb/ros-noetic-rosbag-1.16.0/src/recorder.cpp,shared_ptr<ros::Subscriber> rosbag::Recorder::subscribe,256,['/rosout']

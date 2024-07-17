@@ -1,0 +1,13 @@
+<launch>
+  <!-- Play the bag file -->
+  <node pkg="rosbag" type="play" name="play_bag" args="$(find ekf_localizer)/bagfiles/rosbot_outdoor_bag_files/Jul2_outdoor_gps_23bag.bag" output="screen" />
+
+  <!-- Run the GPS to UTM conversion node -->
+  <node pkg="ekf_localizer" type="rosbot_outdoor_ekf.py" name="rosbot_outdoor_ekf" output="screen" />
+
+  <!-- Run the EKF node -->
+  <node pkg="ekf_localizer" type="ekf_node.py" name="ekf_node" output="screen" />
+
+  <!-- Record all topics into a new bag file -->
+  <node pkg="rosbag" type="record" name="record_bag" args="-a -O $(find ekf_localizer)/bagfiles/rosbot_outdoor_bag_files/test_output_ekf_test_5.bag" output="screen" />
+</launch>
